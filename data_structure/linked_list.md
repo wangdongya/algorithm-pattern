@@ -379,7 +379,8 @@ func hasCycle(head *ListNode) bool {
     fast := head.Next
     slow := head
     for fast != nil && fast.Next != nil {
-        if fast.Val == slow.Val {
+        // 比较指针是否相等（不要使用val比较！）
+        if fast == slow {
             return true
         }
         fast = fast.Next.Next
@@ -389,7 +390,7 @@ func hasCycle(head *ListNode) bool {
 }
 ```
 
-### [linked-list-cycle-ii](https://leetcode-cn.com/problems/https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+### [linked-list-cycle-ii](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 
 > 给定一个链表，返回链表开始入环的第一个节点。  如果链表无环，则返回  `null`。
 
@@ -581,6 +582,6 @@ func copyRandomList(head *Node) *Node {
 - [ ] [sort-list](https://leetcode-cn.com/problems/sort-list/)
 - [ ] [reorder-list](https://leetcode-cn.com/problems/reorder-list/)
 - [ ] [linked-list-cycle](https://leetcode-cn.com/problems/linked-list-cycle/)
-- [ ] [linked-list-cycle-ii](https://leetcode-cn.com/problems/https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+- [ ] [linked-list-cycle-ii](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 - [ ] [palindrome-linked-list](https://leetcode-cn.com/problems/palindrome-linked-list/)
 - [ ] [copy-list-with-random-pointer](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)
